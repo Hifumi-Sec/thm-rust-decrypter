@@ -1,15 +1,13 @@
 extern crate base64;
 
-// Problem: Decode a plaintext string that is currently encoded using the following structure: ROT13 => base64 => rot13
-
-// My Solution: Create a for loop to iterate over the string to find the Rot13, and then using a simple base64 crate for the second decryption, and back to the original algorithm for the final flag.
-
 /**************************************************************************/
-/*  Owner/Creator: @Hifumi-Sec (https://github.com/Hifumi-Sec)            */
+/*  Owner/Creator: @Hifumi1337 (https://github.com/Hifumi1337)            */
 /*  Created on: October 1st, 2021                                         */
-/*  Support the dev: https://github.com/Hifumi-Sec                        */
-/*  Open-Source Project: https://github.com/Hifumi-Sec/thm-rust-decrypter */
+/*  Support the dev: https://github.com/Hifumi1337                        */
+/*  Open-Source Project: https://github.com/Hifumi1337/thm-rust-decrypter */
 /**************************************************************************/
+
+// Problem: Decode a plaintext string that is currently encoded using the following structure: ROT13 => base64 => rot13
 
 fn main() {
     let encoded_message = "M3I6r2IbMzq9";
@@ -24,9 +22,11 @@ fn main() {
 // rot13 algorithm put together from various sources
 fn rot13(encoded_message: String) -> String {
     let mut result_str = String::from("");
+    
     // Iterates over encoded_message
     for x in encoded_message.chars() {
         let charcode = x as u32; // 32-bit - unsigned
+        
         if x.is_lowercase() {
             // Checks if character in string is lowercase
             let check_text = 'a' as u32; // 32-bit - unsigned
