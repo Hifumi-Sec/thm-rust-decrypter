@@ -1,8 +1,8 @@
 extern crate base64;
 
 /***********************************************************************/
-/*  Creator: azazelm3dj3d (https://github.com/azazelm3dj3d)            */
-/*  OLearn more: https://github.com/azazelm3dj3d/thm-rust-decrypter    */
+/*  Creator: battleoverflow (https://github.com/battleoverflow)        */
+/*  OLearn more: https://github.com/battleoverflow/thm-rust-decrypter  */
 /***********************************************************************/
 
 // Problem: Decode a plaintext string that is currently encoded using the following structure: ROT13 => base64 => rot13
